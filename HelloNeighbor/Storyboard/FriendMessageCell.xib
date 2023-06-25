@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellId1" rowHeight="60" id="BNb-3Z-AbO" customClass="FriendMessageCell" customModule="SideLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BNb-3Z-AbO" id="Ml4-yv-gUk">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MkD-uq-4AY">
+                        <rect key="frame" x="3" y="10" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.23529411759999999" green="0.79607843140000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="5ig-nN-lNi"/>
+                            <constraint firstAttribute="height" constant="40" id="NMb-lB-YGh"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="メッセージメッセージメッセージメ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lXS-dm-HDS">
+                        <rect key="frame" x="48" y="10" width="255" height="34"/>
+                        <color key="backgroundColor" red="0.8862745098" green="0.94117647059999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="255" id="tcf-kQ-1sN"/>
+                        </constraints>
+                        <color key="textColor" red="0.16078431369999999" green="0.41176470590000003" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
+                    <label opaque="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09/21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHG-tK-sj3">
+                        <rect key="frame" x="306" y="32" width="27" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="MkD-uq-4AY" firstAttribute="top" secondItem="Ml4-yv-gUk" secondAttribute="top" constant="10" id="Czf-Kb-sFQ"/>
+                    <constraint firstAttribute="bottom" secondItem="lXS-dm-HDS" secondAttribute="bottom" constant="16" id="IU5-A9-wBf"/>
+                    <constraint firstItem="MkD-uq-4AY" firstAttribute="leading" secondItem="Ml4-yv-gUk" secondAttribute="leading" constant="3" id="NJa-Nb-03X"/>
+                    <constraint firstItem="lXS-dm-HDS" firstAttribute="leading" secondItem="MkD-uq-4AY" secondAttribute="trailing" constant="5" id="NXx-1G-tBm"/>
+                    <constraint firstItem="cHG-tK-sj3" firstAttribute="bottom" secondItem="lXS-dm-HDS" secondAttribute="bottom" id="Rl0-AP-e1V"/>
+                    <constraint firstItem="cHG-tK-sj3" firstAttribute="leading" secondItem="lXS-dm-HDS" secondAttribute="trailing" constant="3" id="b7q-pP-3bt"/>
+                    <constraint firstItem="lXS-dm-HDS" firstAttribute="top" secondItem="Ml4-yv-gUk" secondAttribute="top" constant="10" id="vtI-XH-OqD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="DateLabel" destination="cHG-tK-sj3" id="Xaq-4I-On6"/>
+                <outlet property="MessageTextView" destination="lXS-dm-HDS" id="xeI-my-ZXs"/>
+                <outlet property="messageTextViewWidthConstraint" destination="tcf-kQ-1sN" id="aNJ-R0-6uc"/>
+                <outlet property="userImageView" destination="MkD-uq-4AY" id="iDu-6R-9Lb"/>
+            </connections>
+            <point key="canvasLocation" x="-97" y="-53"/>
+        </tableViewCell>
+    </objects>
+</document>

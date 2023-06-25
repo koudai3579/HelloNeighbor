@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatInputAccessoryView" customModule="HelloNeighbor" customModuleProvider="target">
+            <connections>
+                <outlet property="chatTextView" destination="Lyh-tq-z8X" id="0Fj-ee-Lm3"/>
+                <outlet property="sendImageButton" destination="GGL-X4-umt" id="Fbe-O4-4C2"/>
+                <outlet property="sendMessageButton" destination="he1-kh-ZR9" id="a1U-9X-DrQ"/>
+                <outlet property="textCountLabel" destination="XEj-UN-Qyv" id="Nu9-Uc-wiN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="a78-vj-3pO">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGL-X4-umt">
+                    <rect key="frame" x="10" y="5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="doL-bo-Wk4"/>
+                        <constraint firstAttribute="width" constant="40" id="yxa-ZO-uPc"/>
+                    </constraints>
+                    <color key="tintColor" red="0.23529411759999999" green="0.79607843140000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="camera.on.rectangle" catalog="system"/>
+                    <connections>
+                        <action selector="cameraButton:" destination="-1" eventType="touchUpInside" id="Z1b-eY-XxO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he1-kh-ZR9">
+                    <rect key="frame" x="353" y="5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Sya-m3-L1X"/>
+                        <constraint firstAttribute="height" constant="40" id="yK9-Uc-ZTU"/>
+                    </constraints>
+                    <color key="tintColor" red="0.23529411759999999" green="0.79607843140000001" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="paperplane.fill" catalog="system"/>
+                    <connections>
+                        <action selector="tappedSendButton:" destination="-1" eventType="touchUpInside" id="bb2-tt-EWc"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lyh-tq-z8X" customClass="PlaceTextView" customModule="HelloNeighbor" customModuleProvider="target">
+                    <rect key="frame" x="60" y="10" width="283" height="35"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEj-UN-Qyv">
+                    <rect key="frame" x="359.66666666666669" y="50" width="27.333333333333314" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="2Uk-p5-RnW"/>
+            <color key="backgroundColor" red="0.90588235289999997" green="0.94117647059999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Lyh-tq-z8X" firstAttribute="top" secondItem="a78-vj-3pO" secondAttribute="top" constant="10" id="AmJ-yU-WWa"/>
+                <constraint firstItem="2Uk-p5-RnW" firstAttribute="trailing" secondItem="XEj-UN-Qyv" secondAttribute="trailing" constant="16" id="CwJ-0W-JhP"/>
+                <constraint firstAttribute="trailing" secondItem="he1-kh-ZR9" secondAttribute="trailing" constant="10" id="FON-VK-iht"/>
+                <constraint firstItem="GGL-X4-umt" firstAttribute="leading" secondItem="a78-vj-3pO" secondAttribute="leading" constant="10" id="PM2-Cy-2My"/>
+                <constraint firstItem="Lyh-tq-z8X" firstAttribute="bottom" secondItem="GGL-X4-umt" secondAttribute="bottom" id="RfF-3H-Zk2"/>
+                <constraint firstItem="he1-kh-ZR9" firstAttribute="leading" secondItem="Lyh-tq-z8X" secondAttribute="trailing" constant="10" id="YgE-ew-YWZ"/>
+                <constraint firstItem="XEj-UN-Qyv" firstAttribute="top" secondItem="Lyh-tq-z8X" secondAttribute="bottom" constant="5" id="bed-nc-tOD"/>
+                <constraint firstItem="Lyh-tq-z8X" firstAttribute="bottom" secondItem="he1-kh-ZR9" secondAttribute="bottom" id="ff0-HW-XSw"/>
+                <constraint firstAttribute="bottom" secondItem="Lyh-tq-z8X" secondAttribute="bottom" constant="35" id="kNT-fF-vip"/>
+                <constraint firstItem="Lyh-tq-z8X" firstAttribute="leading" secondItem="GGL-X4-umt" secondAttribute="trailing" constant="10" id="uzd-7v-vur"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-1585.4961832061067" y="-1026.056338028169"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera.on.rectangle" catalog="system" width="128" height="98"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

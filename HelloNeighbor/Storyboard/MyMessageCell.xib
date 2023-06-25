@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellId3" rowHeight="60" id="xm4-r1-x9o" customClass="MyMessageCell" customModule="HelloNeighbor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xm4-r1-x9o" id="Dd5-Ho-ZrU">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="こんにちは！" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CDO-H0-LDz">
+                        <rect key="frame" x="149" y="10" width="255" height="34"/>
+                        <color key="backgroundColor" red="0.23529411759999999" green="0.63921568630000003" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="255" id="P4z-sJ-UPo"/>
+                        </constraints>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
+                    <label opaque="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09/21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wr-bH-gWZ">
+                        <rect key="frame" x="119" y="32" width="27" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="既読" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1L-eQ-WLO">
+                        <rect key="frame" x="125" y="17" width="21" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="CDO-H0-LDz" firstAttribute="leading" secondItem="1wr-bH-gWZ" secondAttribute="trailing" constant="3" id="3yY-kJ-ljG"/>
+                    <constraint firstAttribute="bottom" secondItem="CDO-H0-LDz" secondAttribute="bottom" constant="16" id="5ud-vb-5fz"/>
+                    <constraint firstAttribute="trailing" secondItem="CDO-H0-LDz" secondAttribute="trailing" constant="10" id="6GM-Zv-H7a"/>
+                    <constraint firstItem="1wr-bH-gWZ" firstAttribute="top" secondItem="R1L-eQ-WLO" secondAttribute="bottom" constant="3" id="6S7-DX-iq0"/>
+                    <constraint firstItem="CDO-H0-LDz" firstAttribute="top" secondItem="Dd5-Ho-ZrU" secondAttribute="top" constant="10" id="ABW-ye-2Uf"/>
+                    <constraint firstItem="CDO-H0-LDz" firstAttribute="leading" secondItem="R1L-eQ-WLO" secondAttribute="trailing" constant="3" id="Dtv-xt-V13"/>
+                    <constraint firstItem="1wr-bH-gWZ" firstAttribute="bottom" secondItem="CDO-H0-LDz" secondAttribute="bottom" id="Zqp-WC-1rp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="myDateLabel" destination="1wr-bH-gWZ" id="nhY-b8-tMV"/>
+                <outlet property="myMessageTextView" destination="CDO-H0-LDz" id="Y5Z-JG-AeP"/>
+                <outlet property="myMessageTextViewWidthConstraint" destination="P4z-sJ-UPo" id="3SH-ED-C3P"/>
+                <outlet property="whetherReadLabel" destination="R1L-eQ-WLO" id="zpS-VT-fYX"/>
+            </connections>
+            <point key="canvasLocation" x="-186.25954198473281" y="-104.22535211267606"/>
+        </tableViewCell>
+    </objects>
+</document>
